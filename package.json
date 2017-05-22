@@ -7,7 +7,8 @@
     "css": "postcss -c postcss.config.js -o ./static/bundle.css ./static-src/base.css",
     "min": "postcss -u cssnano ./static/bundle.css -o ./static/bundle.min.css",
     "watch": "hugo server -w && nodemon --quiet --watch ./static-src/ --ext css --exec npm run css",
-    "start": "hugo server -w"
+    "start": "hugo server -w",
+    "postinstall": "mkdir content && npm run css"
   },
   "author": "",
   "license": "ISC",
